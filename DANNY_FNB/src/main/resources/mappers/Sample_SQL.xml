@@ -4,6 +4,8 @@
 <mapper namespace="sample">
 
 	<select id="selectTest" parameterType="hashmap" resultType="hashmap">
-		SELECT '100' AS CO_DIV, 'TEST' CO_NAME
+		select *
+		from cd_common
+		<!-- SELECT '100' AS CO_DIV, 'TEST' CO_NAME -->
 	</select>
 </mapper>

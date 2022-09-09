@@ -1,6 +1,7 @@
 package cc.greenit.sample.controller;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 
 import org.slf4j.Logger;
@@ -34,11 +35,12 @@ public class SampleController {
 	
 	@ResponseBody
 	@RequestMapping(value = "/testDB", method = RequestMethod.GET)
-	public HashMap<String, Object> testDB() {
-		HashMap<String, Object> result = sampleService.selectTest(null);
+	public List<HashMap<String, Object>> testDB() {
 		
-		logger.info(result.get("CO_DIV").toString());
-		logger.info(result.get("CO_NAME").toString());
+		System.out.println("testDB");
+		List<HashMap<String, Object>> result = sampleService.selectTest(null);
+		
+//		logger.info(result.get("CO_NAME").toString());
 
 		return result;
 	}

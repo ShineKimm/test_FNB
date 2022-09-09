@@ -1,6 +1,7 @@
 package cc.greenit.sample.service;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ public class SampleServiceImpl implements SampleService {
 	}
 
 	@Override
-	public HashMap<String, Object> selectTest(Map<String, Object> params) {
+	public List<HashMap<String, Object>> selectTest(Map<String, Object> params) {
 		return sampleDAO.selectTest(params);
 	}
 	
